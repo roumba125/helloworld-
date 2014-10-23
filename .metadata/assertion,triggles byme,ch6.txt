@@ -1,0 +1,54 @@
+el assertions d 3obara 3n check 3la el constiants bta3et el db y3ny aa y3ny bt2ked en el business rules bta3et el db d slema y3ny msln b check if any employee has a salary > manger salary ? lw el ntega tl3t 7aga y3ny lw tl3 f f3ln emp bya5do aktr mn el manger ? so yb2a el assertion d violates y3ny etksrt yb2a 3shan yb2a f assertion sha8la tmam lzm el result bt3ha ykon empty
+so kda yb2a el structure bt3ha mashy ezay? y3ny tre2t ktbtha create assertion w b3den esm el assertion w da ana elly b5taro w b3den klmt Check w b3den el query elly hatcheck 3leha hwa ka syntax msh 3lena bs e3rf btb2a maktoba ezay bs msh haygy f el exam msln ektbly query assertion yb2a el assertion lzm ttl3 aa ? el output bt3ha lzm yb2a aa aha w kman lzm ykon feha klmt not exist 3shan ana bt2ked en mafesh wla mozf mrtbo a3la mn el moder f 3shan ttl3 empty w at2ked en el acheck 3la el constrian da haktb kda Create asserttion ay_esm check (not exist (select* 
+from employee , employeeM 
+where employee,slary>= employeeM.salary
+ fhmny ?
+..................
+el triggles b2a
+d 3obara 3n events mo3ena
+lma bt7sl el trrigle btsht8l
+msln lw ana 3awza azwed mortb mwzf
+da kda event
+lzm hna hatcheck 3la condition mo3en w da tany 7aga f el trrigle
+hl el mortb bta3 el mowzf hayb2a a3la mn mortb el supervisor bta3o ?
+lw aha
+ha3mel action mo3en b2a
+habl8 el moder
+aw ha3mel ay action
+el action da momkn a3melo before aw after el event
+y3ny mogrd ma el trigle esht8let lma el event 7sl y3ny ha3m3el action 2bl ma l operation d ttm aw after y3ny b3d mattm ha3mel action
+Three components Event: When this event happens, the trigger is activated Condition (optional): If the condition is true, the trigger executes, otherwise skipped Action: The actions performed by the trigger
+........................................................
+ch 6
+SELECT operation with a conjunctive (AND) condition; that is,
+?<cond1>(?<cond2>(...(?<condn>(R)) ...)) = ?<cond1> AND<cond2> AND...AND <condn>(R)
+kza select gwa b3dha aw momkn a3mel benhom and
+f kda el select d m3naha eny ba5od magmo3et tuple y3ny rows mn el table
+lkn el project elly hya (pi) d bta5od magmo3et coloums
+zyy msln lw ha2olk ana 3awza asmy kol el students w el ids bt3thom
+f msh hazher el grade wla el year msln
+w hageb kol el coloums
+bs f 7aga
+lw 3ndy tuples mtkrra msln
+y3ny msln lw ana 3awza kol el sex m3 el salary
+lw f aktr mn male bya5od 4000 gneh msh hazher ela wa7ed bs
+w shoof d
+?<list1> (?<list2>(R)) = ?<list1>(R)
+tool ma fe values mwgoda f list 2
+yb2a h3mlaha ignore w a5odha mara wa7da bs
+?<list1> (?<list2>(R)) = ?<list1>(R)
+as long as <list2> contains the attributes in <list1>; otherwise, the left-hand side is
+an incorrect expression. It is also noteworthy that commutativity does not hold on
+PROJECT.
+In SQL, the PROJECT attribute list is specified in the SELECT clause of a query. For
+example, the following operation:
+?Sex, Salary(EMPLOYEE)
+would correspond to the following SQL query:
+SELECT DISTINCT Sex, Salary
+FROM EMPLOYEE
+Notice that if we remove the keyword DISTINCT from this SQL query, then duplicates
+will not be eliminated. This option is not available in the formal relational
+algebra.
+Note that INTERSECTION can be expressed in terms of union and set difference as
+follows:
+R ? S = ((R ? S ) ? (R ? S )) ? (S ? R)
